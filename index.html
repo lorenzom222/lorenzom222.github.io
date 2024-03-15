@@ -1,1 +1,70 @@
-Hi Lorissa, welcome to this website. You're probably wondering how we got here.... well it all began long ago when I got up to take a shit in the middle of the night. When I went to sit on the cold icey toilet, i braced myself. I knew it was going to be awhile, so i quickly whipped out my celluar device. Scrolling on twitter at 2am seems be a mindless thing, but.. then i noticed something. I'll save u the tech jargin, but main point is I noticed a way to make a website without paying any money. So that where we are today. It's this ground breaking anyways, best of luck on your journeys.
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="mediaqueries.css">
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"> Lorenzo Mendoza</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">experience</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="waffle-nav">
+        <div class="logo">Lorenzo Mendoza</div>
+        <div class="waffle-menu">
+            <div class="waffle-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">contact</a></li>
+
+            </div>
+        </div>
+    </nav>
+
+    <section id="profile">
+        <div class="section_pic-container">
+            <img src="./assets/pfp.png" alt="Lorenzo Mendoza PFP">
+        </div>
+        <div class="section_text">
+
+            <div class="section_text_p1">Hello I'm</div>
+            <h1 class="title">Lorenzo Mendoza</h1>
+            <p class="section_text_p2">Software Engineer</p>
+            <div class="btn_container">
+                <button class=" btn btn-color-2" onclick="window.open('./assets/resume.pdf')"> Download CV</button>
+                <button class=" btn btn-color-1" onclick="location.href = './#contact'"> Contact Info</button>
+            </div>
+            <div id="social-container">
+                <img src="./assets/linkedin.png" alt="My Linkedin" class="icon"
+                    onclick="location.href='http://linkedin.com/in/lorenzonmendoza/'">
+
+                <img src="./assets/github.png" alt="My Github" class="icon"
+                    onclick="location.href='http://github.com/lorenzom222'">
+            </div>
+
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>
