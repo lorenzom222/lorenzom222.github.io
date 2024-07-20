@@ -180,6 +180,10 @@ section {
     justify-content: center;
     gap: 5rem;
     height: 80vh;
+    overflow: hidden;
+    /* position: relative; */
+    /* Ensure it stays within the profile section */
+
 }
 
 .section_pic-container {
@@ -451,4 +455,20 @@ footer {
 
 footer p {
     text-align: center;
+}
+
+
+.vanta-container {
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    height: 150vh;
+    position: absolute;
+    /* Match the height of the profile section */
+    z-index: -1;
+    /* Ensure it stays behind other content */
+    overflow: hidden;
+    /* Ensure it doesn't overflow */
 }

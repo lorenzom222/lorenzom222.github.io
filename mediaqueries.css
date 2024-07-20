@@ -21,6 +21,10 @@
 
     #waffle-nav {
         display: flex;
+        z-index: 10;
+        /* Higher z-index for the navigation menu */
+        position: relative;
+        /* Ensure the z-index takes effect */
     }
 
     #experience,
