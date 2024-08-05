@@ -9,20 +9,6 @@ let vantaContainer = document.createElement('div');
 vantaContainer.classList.add('vanta-container');
 profileSection.appendChild(vantaContainer);
 
-// let vantaEffect = VANTA.BIRDS({
-//     el: vantaContainer,
-//     mouseControls: true,
-//     touchControls: true,
-//     gyroControls: false,
-//     minHeight: profileSection.offsetHeight,
-//     minWidth: window.innerWidth, // Full viewport width
-//     scale: 1.00,
-//     scaleMobile: 1.00,
-//     backgroundColor: 0xffffff,
-//     speedLimit: 3.00,
-//     separation: 14.00
-// });
-
 
 let vantaEffect = VANTA.NET({
     el: vantaContainer,
