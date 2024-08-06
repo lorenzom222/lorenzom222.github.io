@@ -275,8 +275,72 @@ section {
 
 .icon {
     cursor: pointer;
-    height: 2rem;
+    height: 3rem;
 }
+
+.arrow-container {
+    display: flex;
+    justify-content: flex-end;
+    /* Evenly space the arrows */
+    align-items: center;
+    /* Vertically center the arrows */
+    width: 100%;
+    /* Full width to distribute space evenly */
+    margin: 20px auto;
+    /* Center the container */
+
+}
+
+.arrow-icon {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    /* border-right-color: transparent; */
+    border-top: 20px solid transparent;
+    border-top-color: white;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+}
+
+.arrow-icon:hover {
+    transform: translateY(5px);
+    filter:
+        drop-shadow(0 0 10px rgba(255, 255, 255, 1)) drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.6));
+}
+
+
+
+
+/* .arrow-icon:hover::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    animation: shimmer 1s infinite;
+} */
+
+@keyframes shimmer {
+    0% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+    50% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+}
+
 
 /* BUTTONS */
 
