@@ -100,12 +100,11 @@ a:hover {
     cursor: pointer;
 }
 
-
 .waffle-icon span {
     width: 100%;
     height: 2px;
     background-color: rgb(255, 255, 255);
-    transition: all 0.3 ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 .menu-links {
@@ -113,50 +112,38 @@ a:hover {
     top: 120%;
     right: 0;
     background-color: #23153c;
-    /* Dark background */
     width: max-content;
-    /* Adjusts width to fit content */
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    /* Smooth transition */
     border-radius: 0.5rem;
-    /* Rounded corners */
     border: 2px solid white;
-    /* White border */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
-    /* Glowing shadow effect */
     opacity: 0;
-    /* Hide dropdown initially */
 }
 
 .menu-links.open {
     max-height: 500px;
-    /* Adjust height as needed */
+    /* Adjust as needed */
     opacity: 1;
     /* Show dropdown */
 }
 
-
-
-.menu-links.open {
-    max-height: 500px;
-    /* Adjust height as needed */
-    opacity: 1;
-    /* Show dropdown */
-}
 
 .menu-links a {
-    display: block;
-    padding: 10px 20px;
-    /* Add padding */
-    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
     font-size: 1.5rem;
     color: white;
     /* White text */
     text-decoration: none;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-    /* Smooth transition */
+    position: relative;
+    /* For positioning the submenu */
+    background-color: #23153c;
+    /* Background color for the link */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
 }
 
 .menu-links a:hover {
@@ -173,16 +160,12 @@ a:hover {
 }
 
 
-.menu-links.open {
-    max-height: 300px;
-}
 
 .waffle-icon.open span:first-child {
     transform: rotate(45deg) translate(10px, 5px);
 }
 
 .waffle-icon.open span:nth-child(2) {
-    /* transform: rotate(45deg) translate(10px, 5px); */
     opacity: 0;
 }
 
@@ -192,14 +175,44 @@ a:hover {
 
 .waffle-icon span:first-child {
     transform: none;
-}
-
-.waffle-icon span:first-child {
     opacity: 1;
 }
 
-.waffle-icon span:first-child {
-    transform: none;
+.waffle-dropdown-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    background-color: #3d2b50;
+    border-top: 10px solid #ff57a6;
+    /* Cool border color */
+    border-image: linear-gradient(45deg, #ff57a6, #57d5ff) 1;
+
+    /* Gradient border */
+    padding-left: 20px;
+}
+
+/* .waffle-dropdown.open .waffle-dropdown-content {
+    display: block;
+} */
+
+.waffle-dropdown.open .waffle-dropdown-content {
+    max-height: 300px;
+    /* Adjust as needed */
+    opacity: 1;
+}
+
+/* .waffle-dropdown a.dropdown-toggle {
+    font-weight: bold;
+    color: #ffdd57;
+    border-bottom: 1px solid #ffdd57;
+} */
+
+.waffle-dropdown-content a {
+    padding-left: 20px;
+    color: #f0f0f0;
+    /* Light color for dropdown links */
+    transition: color 0.3s ease-in-out;
 }
 
 /*
@@ -309,7 +322,7 @@ section {
     justify-content: center;
     gap: 5rem;
     height: 80vh;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* position: relative; */
     /* Ensure it stays within the profile section */
 
@@ -353,6 +366,12 @@ section {
     justify-content: center;
     margin-top: 1rem;
     gap: 1rem;
+}
+
+#social-container .icon:hover {
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.7));
+    /* Subtle glow effect */
+    /* Optional: slightly enlarges icons on hover */
 }
 
 

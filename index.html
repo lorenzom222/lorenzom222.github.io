@@ -19,17 +19,18 @@
         <div class="logo">lorenzo mendoza</div>
         <div>
             <ul class="nav-links">
-                <li class="dropdown">
-                    <a href="#about">about</a>
-                    <ul class="dropdown-content">
-                        <li><a href="personal.html">personal</a></li>
-                        <li><a href="about.html">learning</a></li>
-                    </ul>
-                </li>
+                <li><a href="#about">about</a></li>
                 <li><a href="#experience">experience</a></li>
                 <li><a href="#projects">projects</a></li>
                 <li><a href="#contact">contact</a></li>
-                <li><a href="asmr.html">asmr</a></li>
+                <li class="dropdown">
+                    <a>more</a>
+                    <ul class="dropdown-content">
+                        <li><a href="src/learning/my-first-book/book/index.html">learning</a></li>
+                        <li><a href="asmr.html">asmr</a></li>
+                        <li><a href="personal.html">personal</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </nav>
@@ -43,12 +44,18 @@
                 <span></span>
             </div>
             <div class="menu-links">
-
                 <li><a href="#about" onclick="toggleMenu()">about</a></li>
                 <li><a href="#experience" onclick="toggleMenu()">experience</a></li>
                 <li><a href="#projects" onclick="toggleMenu()">projects</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">contact</a></li>
-                <li><a href="asmr.html" onclick="toggleMenu()">asmr</a></li>
+                <li class="waffle-dropdown">
+                    <a href="#" class="dropdown-toggle">more</a>
+                    <ul class="waffle-dropdown-content">
+                        <li><a href="src/learning/my-first-book/book/index.html">learning</a></li>
+                        <li><a href="asmr.html">asmr</a></li>
+                        <li><a href="personal.html">personal</a></li>
+                    </ul>
+                </li>
 
             </div>
         </div>

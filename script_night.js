@@ -4,6 +4,19 @@ function toggleMenu() {
     menu.classList.toggle("open")
     icon.classList.toggle("open")
 }
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdowns = document.querySelectorAll('.waffle-dropdown');
+
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+
+        toggle.addEventListener('click', function (e) {
+            e.preventDefault();
+            dropdown.classList.toggle('open');
+        });
+    });
+});
+
 
 let profileSection = document.querySelector('#profile');
 let vantaContainer = document.createElement('div');
