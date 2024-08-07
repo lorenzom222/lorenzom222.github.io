@@ -202,12 +202,97 @@ a:hover {
     transform: none;
 }
 
+/*
+Drop Down
+*/
+
+/* Dropdown Styles for Desktop Navigation */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #23153c;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    border-radius: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.nav-links .dropdown-content li {
+    margin: 0;
+}
+
+.nav-links .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links .dropdown-content a:hover {
+    background-color: #4a3d7b;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Dropdown Styles for Waffle Menu */
+.menu-links .dropdown {
+    position: relative;
+}
+
+.menu-links .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #23153c;
+    border: 2px solid white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    border-radius: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.menu-links .dropdown-content li {
+    margin: 0;
+}
+
+.menu-links .dropdown-content a {
+    display: block;
+    padding: 10px 20px;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-links .dropdown-content a:hover {
+    background-color: #4a3d7b;
+}
+
+.menu-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
 /* SECTIONS */
 
 section {
 
     padding-top: 4vh;
-    height: 96vh;
+    /* height: 96vh; */
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
@@ -474,7 +559,7 @@ section {
 }
 
 .experience-sub-title {
-    color: rgb(85, 85, 85);
+    color: rgb(255, 255, 255);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 2rem;
@@ -497,13 +582,20 @@ section {
 
 article {
     display: flex;
-    width: 10rem;
+    width: 5rem;
     justify-content: space-around;
+    align-items: center;
+    /* Vertically centers items within the article */
     gap: 0.5rem;
 }
 
 article .icon {
-    cursor: default;
+    width: 2rem;
+    /* Set the width of the image */
+    height: 2rem;
+    /* Set the height of the image */
+    object-fit: contain;
+    /* Ensures images are resized properly */
 }
 
 /* PROJECTS SECTION */
@@ -532,6 +624,16 @@ article .icon {
     color: rgb(16, 16, 16);
     border-color: rgb(163, 163, 163);
 }
+
+.project-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+}
+
 
 /* CONTACT */
 
